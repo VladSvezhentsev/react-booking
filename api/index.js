@@ -20,6 +20,7 @@ const connect = async () => {
 app.use(express.json());
 app.use(cookieParser());
 
+//routes
 app.use("/auth", authRoute);
 app.use("/users", usersRoute);
 app.use("/hotels", hotelsRoute);
