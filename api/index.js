@@ -1,5 +1,5 @@
 import express from "express";
-// import dotenv from "dotenv";
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
@@ -7,7 +7,7 @@ import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 const app = express();
-// dotenv.config();
+dotenv.config();
 
 const connect = async () => {
    try {
@@ -20,7 +20,6 @@ const connect = async () => {
 app.use(express.json());
 app.use(cookieParser());
 
-//routes
 app.use("/auth", authRoute);
 app.use("/users", usersRoute);
 app.use("/hotels", hotelsRoute);
